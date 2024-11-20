@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="main__body">
+    <main>
+      <div class="loader-block">
+        <p class="loader__text">Please wait...</p>
+        <div class="loader"></div>
+      </div>
+      <div class="download-block">
+        <div class="download__status">
+          <p class="download__status--step">STEP 1/2</p>
+          <div class="download__status--lines">
+            <div class="download__status--line active-line"></div>
+            <div
+              class="download__status--line download__status--line-second"
+            ></div>
+          </div>
+        </div>
+        <h1 class="download__title">Your download is ready</h1>
+        <div class="download__circle">
+          <p class="download__circle--percent"></p>
+          <div class="download__circle--arrow">
+            <svg
+              id="Layer_1"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 115.4 122.88"
+            >
+              <path
+                d="M24.94,55A14.66,14.66,0,0,0,4.38,75.91l43.45,42.76a14.66,14.66,0,0,0,20.56,0L111,76.73A14.66,14.66,0,0,0,90.46,55.82l-18,17.69-.29-59.17c-.1-19.28-29.42-19-29.33.24l.29,58.34L24.94,55Z"
+              />
+            </svg>
+          </div>
+          <svg
+            viewBox="0 0 64 64"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="32"
+              cy="32"
+              r="28"
+              stroke-width="6"
+              stroke="#D8DBE3"
+              fill="transparent"
+            />
+            <circle
+              class="progress"
+              cx="32"
+              cy="32"
+              r="28"
+              stroke-width="6"
+              stroke="#0DBB3D"
+              fill="transparent"
+              stroke-dasharray="175.84"
+              stroke-dashoffset="175.84"
+            />
+            <!-- stroke-dasharray="175.84" == 3,14 * (r*2)  -->
+            <!-- 175.84 / 100 = 1% -->
+          </svg>
+        </div>
+        <div class="download__input-block">
+          <label class="input">
+            <input
+              class="input__field"
+              type="text"
+              placeholder=" "
+              value="+47"
+              name="phone"
+              id="phone"
+            />
+            <span class="input__label">Enter your phone number</span>
+            <div class="input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <g data-name="Smart Phone 04">
+                  <path
+                    d="M326.852 74.206H185.158a42.285 42.285 0 0 0-42.242 42.24v279.112a42.29 42.29 0 0 0 42.242 42.236h141.694a42.282 42.282 0 0 0 42.232-42.236V116.442a42.285 42.285 0 0 0-42.232-42.236zm22.126 321.352a22.162 22.162 0 0 1-22.126 22.13H185.158a22.164 22.164 0 0 1-22.136-22.13v-30.65h185.956v30.65zm0-50.765H163.022v-196.07h185.956v196.07zm0-216.175H163.022v-12.171a22.157 22.157 0 0 1 22.136-22.126h141.694a22.155 22.155 0 0 1 22.126 22.126z"
+                  />
+                  <path
+                    d="M242.314 104.869h27.377v13.41h-27.377zM227.913 380.573h56.175v20.111h-56.175z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </label>
+          <button class="download__btn" disabled>CONTINUE</button>
+        </div>
+        <div class="download__sms-block">
+          <label class="input-sms">
+            <input
+              class="input-sms__field-sms"
+              type="text"
+              placeholder="0000"
+              value=""
+              name="sms"
+              id="sms"
+              maxlength="4"
+            />
+            <span class="input-sms__label-sms">Enter your sms code</span>
+          </label>
+          <button class="download__btn-sms" disabled>GET CONTENT</button>
+        </div>
+        <div class="download__verify">
+          <div class="loader-verify"></div>
+          <p class="download__verify--text">
+            Sending the verification message...
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="./js/scripts.min.js"></script>
+</html>
