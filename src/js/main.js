@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (percent === 100) {
         clearInterval(animation);
+        circleProgress.style.strokeDasharray = 176;
         setTimeout(function () {
           percentDisplay.style.display = "none";
           downloadArrow.style.display = "flex";
