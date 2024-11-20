@@ -218,6 +218,9 @@ $percent: 0;
       transition: transform 120ms ease-in;
       font-weight: bold;
       line-height: 1.2;
+      transform: translate(0.25rem, -65%) scale(0.8);
+      color: #0dbb3d;
+      font-size: 18px;
     }
     &__field {
       box-sizing: border-box;
@@ -233,15 +236,6 @@ $percent: 0;
       border-radius: 4px;
       font-size: 18px;
       font-weight: 500;
-
-      &:focus,
-      &:not(:placeholder-shown) {
-        & + .input__label {
-          transform: translate(0.25rem, -65%) scale(0.8);
-          color: #0dbb3d;
-          font-size: 18px;
-        }
-      }
     }
     &__field:focus,
     &__field:active {
